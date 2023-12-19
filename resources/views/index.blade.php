@@ -62,12 +62,7 @@
                                         <td>{{ $user['contact_info']['email'] }}</td>
                                         <td align="center">
                                             <div class="d-flex flex-row justify-content-around">
-                                                <a class="view_btn"
-                                                    href="{{ route('user.profile.view', $user['personal_info']['id']) }}"
-                                                    title="View Profile">
-                                                    <i class="fas fa-eye"></i>
-                                                </a>
-                                                <a class="edit_btn"
+                                              <a class="edit_btn"
                                                     href="{{ route('edit', $user['personal_info']['id']) }}"
                                                     title="Edit Profile">
                                                     <i class="fas fa-edit"></i>
@@ -88,15 +83,7 @@
                                     @endphp
                                 @endforeach
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Sr</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </tfoot>
+                      
                         </table>
                     </div>
                     <!-- /.card-body -->
