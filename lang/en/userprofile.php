@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'manage_user_profiles' => 'Manage User Profiles',
+    'home' => 'Home',
+    'create_user_profile' => 'Create User Profile',
+    'personal_information' => 'Personal Information',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'profile_title' => 'Profile Title',
+    'about' => 'About',
+    'contact_information' => 'Contact Information',
+    'email' => 'Email',
+    'phone_number' => 'Phone Number',
+    'create_profile' => 'Save',
+    'verify_message' => 'Are you sure you want to create a new profile?',
+    'create_profile_button' => 'Save',
+    'edit_user_profile' => 'Edit User Profile',
+    'home' => 'Home',
+    'save' => 'Save',
+    'personal_information' => 'Personal Information',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'profile_title' => 'Profile Title',
+    'about' => 'About',
+    'contact_information' => 'Contact Information',
+    'email' => 'Email',
+    'phone_number' => 'Phone Number',
+    'edit_profile' => 'Edit Profile',
+    'save_changes' => 'Save Changes',
+    'verify_message' => 'Are you sure you want to save these changes?'
+];

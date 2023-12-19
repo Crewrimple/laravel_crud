@@ -27,8 +27,8 @@
     </div>
     <div class="site-nav__toggle">
         <select class="site-nav-btns__toggle" onchange="changeLang(this)">
-            <option value="uz" {{ session('locale') == 'uz' ? 'selected' : '' }}>Uz</option>
             <option value="en" {{ session('locale') == 'en' ? 'selected' : '' }}>En</option>
+            <option value="uz" {{ session('locale') == 'uz' ? 'selected' : '' }}>Uz</option>
             <option value="ru" {{ session('locale') == 'ru' ? 'selected' : '' }}>Ru</option>
         </select>
     </div>
@@ -102,5 +102,11 @@
         <!-- /.row -->
     </div>
 </div>
+<script>
+    function changeLang(lang) {
+        let urls = '/locale/' + lang.value;
+        window.location.href = urls;
+    }
+</script>
 
 {{ view('layouts.footer') }}

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>User Profile</title>
+    <title>Laravel-crud</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -5,28 +5,35 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
-                    <h1 class="m-0">Edit User Profile</h1>
+                    <h1 class="m-0">@lang('userprofile.edit_user_profile')</h1>
                 </div>
                 <div class="col-4 text-right">
                     <a href="{{ route('index') }}" class="add-btn">
                         <i class="fa fa-home"></i>
-                        <br> Home
+                        <br> @lang('userprofile.home')
                     </a>
                     <button onclick="saverecord()" class="save-btn">
                         <i class="fa fa-save"></i>
-                        <br> Save
+                        <br> @lang('userprofile.save')
                     </button>
                 </div>
-            </div>
+              </div>
             <div class="row mb-2">
                 <div class="col-sm-12">
                     <ul class="page-breadcrumb breadcrumb">
                         <li class="breadcrumb-item"><i class="fas fa-angle-right"></i></li>
-                        <li class="breadcrumb-item"><a href="{{ route('index') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('index') }}">@lang('userprofile.home')</a></li>
                         <li class="breadcrumb-item"><i class="fas fa-angle-right"></i></li>
-                        <li class="breadcrumb-item">Edit User Profile</li>
+                        <li class="breadcrumb-item">@lang('userprofile.edit_user_profile')</li>
                     </ul>
                 </div>
+            </div>
+            <div class="site-nav__toggle">
+                <select class="site-nav-btns__toggle" onchange="changeLang(this)">
+                    <option value="en" {{ session('locale') == 'en' ? 'selected' : '' }}>En</option>
+                    <option value="uz" {{ session('locale') == 'uz' ? 'selected' : '' }}>Uz</option>
+                    <option value="ru" {{ session('locale') == 'ru' ? 'selected' : '' }}>Ru</option>
+                </select>
             </div>
         </div>
     </div>
@@ -36,7 +43,7 @@
             <div class="col-12">
                 <div class="card mb-5">
                     <div class="card-header">
-                        <h3 class="card-title">Edit user Profile</h3>
+                        <h3 class="card-title">@lang('userprofile.edit_profile')</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -46,7 +53,7 @@
                                     {{-- Personal Information --}}
                                     <div class="row">
                                         <div class="col-12">
-                                            <h2 class="fw-bold text-secondary">Personal Information</h2>
+                                            <h2 class="fw-bold text-secondary">@lang('userprofile.personal_information')</h2>
                                             <div class="form-outline mb-4">
                                                 <input type="hidden" id="user_id" name="user_id" class="form-control"
                                                     value="{{ isset($information['personal_info']['id']) ? $information['personal_info']['id'] : '' }}" />
@@ -58,10 +65,9 @@
                                                             <div class="col-12">
                                                                 <div class="form-outline mb-4">
                                                                     <label
-                                                                        class="form-label fw-bold text-secondary">First
-                                                                        name</label>
+                                                                        class="form-label fw-bold text-secondary">@lang('userprofile.first_name')</label>
                                                                     <input type="text" id="first_name"
-                                                                        name="first_name" placeholder="First name"
+                                                                        name="first_name" placeholder="@lang('userprofile.first_name')"
                                                                         class="form-control"
                                                                         value="{{ isset($information['personal_info']['first_name']) ? $information['personal_info']['first_name'] : '' }}" />
                                                                 </div>
@@ -69,10 +75,9 @@
                                                             <div class="col-12">
                                                                 <div class="form-outline">
                                                                     <label
-                                                                        class="form-label fw-bold text-secondary">Last
-                                                                        name</label>
+                                                                        class="form-label fw-bold text-secondary">@lang('userprofile.last_name')</label>
                                                                     <input type="text" id="last_name"
-                                                                        name="last_name" placeholder="Last name"
+                                                                        name="last_name" placeholder="@lang('userprofile.last_name')"
                                                                         class="form-control"
                                                                         value="{{ isset($information['personal_info']['last_name']) ? $information['personal_info']['last_name'] : '' }}" />
                                                                 </div>
@@ -95,15 +100,14 @@
                                                 </div>
                                             </div>
                                             <div class="form-outline mb-4">
-                                                <label class="form-label fw-bold text-secondary">Profile
-                                                    Title</label>
+                                                <label class="form-label fw-bold text-secondary">@lang('userprofile.profile_title')</label>
                                                 <input type="text" id="profile_title" name="profile_title"
-                                                    class="form-control" placeholder="Profile Title"
+                                                    class="form-control" placeholder="@lang('userprofile.profile_title')"
                                                     value="{{ isset($information['personal_info']['profile_title']) ? $information['personal_info']['profile_title'] : '' }}" />
                                             </div>
                                             <div class="form-outline mb-4">
-                                                <label class="form-label fw-bold text-secondary">About</label>
-                                                <textarea class="form-control" placeholder="Descripton" id="about_me" name="about_me" rows="4">{{ isset($information['personal_info']['about_me']) ? $information['personal_info']['about_me'] : '' }}</textarea>
+                                                <label class="form-label fw-bold text-secondary">@lang('userprofile.about')</label>
+                                                <textarea class="form-control" placeholder="@lang('userprofile.about')" id="about_me" name="about_me" rows="4">{{ isset($information['personal_info']['about_me']) ? $information['personal_info']['about_me'] : '' }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +115,7 @@
                                     {{-- Contact Information --}}
                                     <div class="row">
                                         <div class="col-12">
-                                            <h2 class="fw-bold text-secondary">Contact Information</h2>
+                                            <h2 class="fw-bold text-secondary">@lang('userprofile.contact_information')</h2>
                                             @foreach ($information['contact_info'] as $contact_info)
                                                 <div class="card mb-4">
                                                     <div class="card-body">
@@ -119,9 +123,9 @@
                                                             <div class="col-md-4 col-sm-6 col-12 mb-4">
                                                                 <div class="form-outline">
                                                                     <label
-                                                                        class="form-label fw-bold text-secondary">Email</label>
+                                                                        class="form-label fw-bold text-secondary">@lang('userprofile.email')</label>
                                                                     <input type="email" id="email"
-                                                                        name="email" placeholder="Email"
+                                                                        name="email" placeholder="@lang('userprofile.email')"
                                                                         class="form-control"
                                                                         value="{{ isset($contact_info['email']) ? $contact_info['email'] : '' }}" />
                                                                 </div>
@@ -129,18 +133,13 @@
                                                             <div class="col-md-4 col-sm-6 col-12 mb-4">
                                                                 <div class="form-outline">
                                                                     <label
-                                                                        class="form-label fw-bold text-secondary">Phone
-                                                                        number</label>
+                                                                        class="form-label fw-bold text-secondary">@lang('userprofile.phone_number')</label>
                                                                     <input type="number" id="phone_number"
-                                                                        name="phone_number" placeholder="Phone Number"
+                                                                        name="phone_number" placeholder="@lang('userprofile.phone_number')"
                                                                         class="form-control"
                                                                         value="{{ isset($contact_info['phone_number']) ? $contact_info['phone_number'] : '' }}" />
                                                                 </div>
                                                             </div>
-                                                         
-                                                         
-                                                           
-                                                          
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,19 +147,15 @@
                                         </div>
                                     </div>
 
-
                                     <!-- Checkbox -->
                                     <div class="form-check d-flex justify-content-center mb-4">
                                         <input class="form-check-input me-2" type="checkbox" value="1"
                                             id="verify" name="verify" required />
-                                        <label for="verify" class="form-check-label text-dark"> Are you sure you
-                                            want to save these changes?
-                                        </label>
+                                        <label for="verify" class="form-check-label text-dark">@lang('userprofile.verify_message')</label>
                                     </div>
 
                                     <!-- Submit button -->
-                                    <button type="submit" id="submitbtn" class="btn btn-lg btn-success w-100">Save
-                                        Changes</button>
+                                    <button type="submit" id="submitbtn" class="btn btn-lg btn-success w-100">@lang('userprofile.save_changes')</button>
                                 </form>
                             </div>
                         </div>
@@ -172,4 +167,10 @@
         <!-- /.row -->
     </div>
 </div>
+<script>
+    function changeLang(lang) {
+        let urls = '/locale/' + lang.value;
+        window.location.href = urls;
+    }
+</script>
 {{ view('layouts.footer') }}
