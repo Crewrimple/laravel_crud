@@ -230,6 +230,29 @@ p {
 .sidebar-wrapper .interests-list li:last-child {
     margin-bottom: 0;
 }
+.site-nav-btns {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav__toggle {
+    margin-left: 2479px; /* Adjust the margin as needed */
+}
+
+.site-nav-btns__toggle {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Optional: Style on hover */
+.site-nav-btns__toggle:hover {
+    background-color: #f5f5f5;
+}
 
 .main-wrapper {
     background: #fff;

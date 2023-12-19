@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Userprofile;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LanguageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +21,4 @@ Route::post('/store', [Userprofile::class, 'store'])->name('store');
 Route::get('/edit/{id}', [Userprofile::class, 'edit'])->name('edit');
 Route::post('/update', [Userprofile::class, 'update'])->name('update');
 Route::post('/destroy/{id}', [Userprofile::class, 'destroy'])->name('destroy');
+Route::get('/locale/{locale}', [LocaleController::class, 'setLocale'])->name('setLocale');
