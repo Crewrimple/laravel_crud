@@ -48,7 +48,7 @@
                                     <th>@lang('menu.Sr')</th>
                                     <th>@lang('menu.Profile Photo')</th>
                                     <th>@lang('menu.Title')</th>
-                                    <th>@lang('menu.First Name')</th>
+                                    <th>@lang('menu.First Name')</th>  
                                     <th>@lang('menu.Last Name')</th>
                                     <th>@lang('menu.Email')</th>
                                     <th>@lang('menu.Actions')</th>
