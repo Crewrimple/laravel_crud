@@ -13,4 +13,5 @@ return [
     'Actions' => 'Harakatlar',
     'Edit Profile' => 'Profilni tahrirlash',
     'Delete Profile' => 'Profilni o‘chirish',
+  
 ];

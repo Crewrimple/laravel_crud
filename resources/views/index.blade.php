@@ -76,14 +76,13 @@
                                                     title="@lang('menu.Edit Profile')">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <form action="{{ route('destroy', $user['personal_info']['id']) }}"
-                                                    method="post" class="d-inline">
+                                                <form action="{{ route('destroy', $user['personal_info']['id']) }}" method="post" class="d-inline">
                                                     @csrf
-                                                    <a href="javascript::void(0)" onclick="confirm_form_delete(this)"
-                                                        class="del_btn" title="@lang('menu.Delete Profile')">
+                                                    <a href="javascript:void(0)" onclick="confirm_form_delete(this)" class="del_btn" title="@lang('menu.delete_profile')">
                                                         <i class="fas fa-user-minus text-danger"></i>
                                                     </a>
                                                 </form>
+                                                
                                             </div>
                                         </td>
                                     </tr>

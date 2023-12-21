@@ -13,4 +13,5 @@ return [
     'Actions' => 'Actions',
     'Edit Profile' => 'Edit Profile',
     'Delete Profile' => 'Delete Profile',
+    'delete_profile' => 'Delete profile',
 ];
