@@ -43,7 +43,7 @@ class Userprofile extends Controller
             $user_data = array();
         }
 
-        return view('index', ['users_data' => $user_data]);
+        return view('index', ['users_data' => $user_]); 
     }
 
     public function view($id)
